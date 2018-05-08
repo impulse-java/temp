@@ -1,0 +1,221 @@
+package calculatorgui;
+
+import java.util.*;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+class GUI extends JFrame implements ActionListener {
+    
+    public JButton one;
+    public JButton two;
+    public JButton three;
+    public JButton four;
+    public JButton five;
+    public JButton six;
+    public JButton seven;
+    public JButton eight;
+    public JButton nine;
+    public JButton zero;
+    public JButton plus;
+    public JButton minus;
+    public JButton times;
+    public JButton div;
+    public JButton clear;
+    public JButton equals;
+    public JButton ssigns;
+    public JTextField text;
+    public JLabel label;
+    
+    public GUI() {
+        
+      setTitle("Calculator");
+      setLayout(null);
+      setSize(310, 555);
+      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      getContentPane().setBackground(null);
+      setVisible(true);
+      
+      label = new JLabel("Standard Calculator");
+      label.setLocation(12, 5);
+      label.setSize(320, 75);
+      label.setForeground(Color.black);
+      label.setFont(new Font("Arial", Font.PLAIN, 28));
+      getContentPane().add(label);
+      
+      text = new JTextField(120);
+      text.setLocation(12, 75);
+      text.setText("");
+      text.setSize(271, 75);
+      getContentPane().add(text);
+      
+      seven = new JButton("7");
+      seven.setLocation(12, 165);
+      seven.setSize(60, 60);
+      seven.addActionListener(this);
+      getContentPane().add(seven);
+      
+      eight = new JButton("8");
+      eight.setLocation(82, 165);
+      eight.setSize(60, 60);
+      eight.addActionListener(this);
+      getContentPane().add(eight);
+      
+      nine = new JButton("9");
+      nine.setLocation(152, 165);
+      nine.setSize(60, 60);
+      nine.addActionListener(this);
+      getContentPane().add(nine);
+      
+      four = new JButton("4");
+      four.setLocation(12, 235);
+      four.setSize(60, 60);
+      four.addActionListener(this);
+      getContentPane().add(four);
+      
+      five = new JButton("5");
+      five.setLocation(82, 235);
+      five.setSize(60, 60);
+      five.addActionListener(this);
+      getContentPane().add(five);
+      
+      six = new JButton("6");
+      six.setLocation(152, 235);
+      six.setSize(60, 60);
+      six.addActionListener(this);
+      getContentPane().add(six);
+      
+      one = new JButton("1");
+      one.setLocation(12, 305);
+      one.setSize(60, 60);
+      one.addActionListener(this);
+      getContentPane().add(one);
+      
+      two = new JButton("2");
+      two.setLocation(82, 305);
+      two.setSize(60, 60);
+      two.addActionListener(this);
+      getContentPane().add(two);
+      
+      three = new JButton("3");
+      three.setLocation(152, 305);
+      three.setSize(60, 60);
+      three.addActionListener(this);
+      getContentPane().add(three);
+      
+      zero = new JButton("0");
+      zero.setLocation(12, 375);
+      zero.setSize(60, 60);
+      zero.addActionListener(this);
+      getContentPane().add(zero);
+      
+      plus = new JButton("+");
+      plus.setLocation(222, 165);
+      plus.setSize(60, 60);
+      plus.addActionListener(this);
+      getContentPane().add(plus);
+      
+      minus = new JButton("-");
+      minus.setLocation(222, 235);
+      minus.setSize(60, 60);
+      minus.addActionListener(this);
+      getContentPane().add(minus);
+      
+      times = new JButton("x");
+      times.setLocation(222, 305);
+      times.setSize(60, 60);
+      times.addActionListener(this);
+      getContentPane().add(times);
+      
+      div = new JButton("/");
+      div.setLocation(222, 375);
+      div.setSize(60, 60);
+      div.addActionListener(this);
+      getContentPane().add(div);
+      
+      clear = new JButton("CLEAR");
+      clear.setLocation(12, 445);
+      clear.setSize(130, 60);
+      clear.addActionListener(this);
+      getContentPane().add(clear);
+      
+      equals = new JButton("ENTER");
+      equals.setLocation(152, 445);
+      equals.setSize(130, 60);
+      equals.addActionListener(this);
+      getContentPane().add(equals);
+      
+      ssigns = new JButton("(-)");
+      ssigns.setLocation(82, 375);
+      ssigns.setSize(130, 60);
+      ssigns.addActionListener(this);
+      getContentPane().add(ssigns);
+      
+      
+    }
+    
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == one) {
+            text.setText("1");
+            if(e.getSource() == one) {
+                
+            }
+        }
+        if(e.getSource() == two) {
+            text.setText("2");
+        }
+        if(e.getSource() == three) {
+            text.setText("3");
+        }
+        if(e.getSource() == four) {
+            text.setText("4");
+        }
+        if(e.getSource() == five) {
+            text.setText("5");
+        }
+        if(e.getSource() == six) {
+            text.setText("6");
+        }
+        if(e.getSource() == seven) {
+            text.setText("7");
+        }
+        if(e.getSource() == eight) {
+            text.setText("8");
+        }
+        if(e.getSource() == nine) {
+            text.setText("9");
+        }
+        if(e.getSource() == zero) {
+            text.setText("0");
+        }
+        if(e.getSource() == plus) {
+            text.setText("+");
+        }
+        if(e.getSource() == minus) {
+            text.setText("-");
+        }
+        if(e.getSource() == times) {
+            text.setText("*");
+        }
+        if(e.getSource() == div) {
+            text.setText("/");
+        }
+        if(e.getSource() == clear) {
+            text.setText(null);
+        }
+        if(e.getSource() == equals) {
+            
+        }
+        if(e.getSource() == ssigns) {
+            
+        }
+    }
+}
+
+public class CalculatorGUI {
+
+    public static void main(String[] args) {
+        GUI applet = new GUI();
+    }
+    
+}
